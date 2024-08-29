@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Welcome To Alexandria The Great's Library</h1>
+    <div class="displayForm">
+      <dialog>
+        <form action="" id="form">
+          <fieldset>
+            <legend>Book Information</legend>
+            <div>
+              <label for="title">Title</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label for="author">author</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label for="pages">pages</label>
+              <input type="number" />
+            </div>
+            <fieldset id="radioBtn">
+              <legend>Have you read the book ?</legend>
+              <input type="radio" name="read-notread" id="read" /><label
+                for="read"
+                >Yes</label
+              >
+
+              <input type="radio" name="read-notread" id="notRead" /><label
+                for="notRead"
+                >Not yet</label
+              >
+            </fieldset>
+          </fieldset>
+
+          <button id="closeFormBtn">Add</button>
+        </form>
+      </dialog>
+    </div>
+    <div id="displayBook"></div>
+    <button id="displayFormBtn">NEW BOOK</button>
+    <script src="script.js"></script>
+  </body>
+</html>
