@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Welcome To Alexandria The Great's Library</h1>
+    <h1>Welcome To The Great's Library</h1>
     <div class="displayForm">
       <dialog>
         <form action="" id="form">
@@ -15,15 +15,15 @@
             <legend>Book Information</legend>
             <div>
               <label for="title">Title</label>
-              <input type="text" />
+              <input type="text" id="title" />
             </div>
             <div>
               <label for="author">author</label>
-              <input type="text" />
+              <input type="text" id="author" />
             </div>
             <div>
               <label for="pages">pages</label>
-              <input type="number" />
+              <input type="number" id="pages" />
             </div>
             <fieldset id="radioBtn">
               <legend>Have you read the book ?</legend>
@@ -43,8 +43,9 @@
         </form>
       </dialog>
     </div>
-    <div id="displayBook"></div>
+
     <button id="displayFormBtn">NEW BOOK</button>
+    <div id="displayBook"></div>
     <script src="script.js"></script>
   </body>
 </html>
