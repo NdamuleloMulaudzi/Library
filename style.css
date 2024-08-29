@@ -1,9 +1,18 @@
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: Rubik;
+  src: url(/RubikLines-Regular.ttf);
+}
 body {
   margin-top: 100px;
   text-align: center;
+  background-color: #e6ebe8;
+}
+h1 {
+  font-family: Rubik;
+  font-size: 3em;
 }
 
 form {
@@ -17,4 +26,80 @@ form {
   border-radius: 10px;
   margin: 20px;
   padding: 10px;
+}
+#displayFormBtn:hover {
+  cursor: pointer;
+  background-color: #494b4a;
+  color: beige;
+}
+
+dialog {
+  background-color: #929695;
+  width: 300px;
+  color: beige;
+}
+fieldset {
+  border: none;
+}
+legend {
+  font-size: 1.3em;
+}
+fieldset > div {
+  margin-bottom: 10px;
+}
+label {
+  font-size: 1.2em;
+  color: black;
+}
+input {
+  color: black;
+  font-size: 1.2rem;
+  border: 2px solid beige;
+  border-radius: 4px;
+}
+
+#closeFormBtn {
+  background-color: transparent;
+  width: 200px;
+  font-size: 1.2em;
+  border-bottom: beige 1px solid;
+  border-radius: 6px;
+}
+#closeFormBtn:hover {
+  cursor: pointer;
+  background-color: beige;
+  color: #494b4a;
+}
+
+/* style bookCard and displayBooks */
+.bookCard {
+  border: 2px #494b4a solid;
+
+  height: 300px;
+  font-size: 1.3em;
+  background-color: #494b4a;
+  color: beige;
+  border-radius: 7px;
+}
+
+#displayBook {
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  grid-auto-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.ReadBtn {
+  background-color: hwb(128 0% 0%);
+  font-size: 1.2rem;
+  border-radius: 4px;
+  width: 100px;
+}
+
+.remove {
+  background-color: hwb(0 0% 0%);
+  font-size: 1.2rem;
+  border-radius: 4px;
+  width: 100px;
 }

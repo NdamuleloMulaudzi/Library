@@ -27,13 +27,12 @@ function displayBook() {
   displayBooks.innerHTML = "";
   myLibrary.forEach((book, index) => {
     const bookCard = document.createElement("div");
+    bookCard.setAttribute("class", "bookCard");
     bookCard.innerHTML = `<h2>${book.title}</h2>
       <p>Author: ${book.author}</p>
       <p>Pages: ${book.pages}</p>
-      <p>Read Yet?: ${book.isRead ? "Yes" : "No"} </p>
-      <button class="ReadBtn">${
-        book.isRead ? "I've Read" : "Not Yet Read"
-      }</button>
+      <p>Read Yet ?: ${book.isRead ? "No" : "Yes"} </p>
+      <button class="ReadBtn">${book.isRead ? "I've Read" : "Not Read"}</button>
       <button class="remove" id="${index}">Remove</button>`;
 
     bookCard.querySelector(".ReadBtn").addEventListener("click", () => {
@@ -51,6 +50,21 @@ function displayBook() {
     });
   });
 }
+
+const book1 = new Book("Someday, Maybe", "Onyi Nwabineli ", 352);
+const book2 = new Book("Exit Wounds", "Peter Godwin", 288);
+const book3 = new Book(
+  "Before I Let Go: the perfect angst-ridden romance",
+  " Kennedy Ryan ",
+  400
+);
+const book4 = new Book("I Do… Don't I?", "Zibu Sithole", 216);
+
+addBookToLibrary(book1);
+addBookToLibrary(book2);
+addBookToLibrary(book3);
+addBookToLibrary(book4);
+displayBook();
 
 displayForm.addEventListener("click", () => {
   dialog.showModal();
