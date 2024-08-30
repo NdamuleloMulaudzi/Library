@@ -25,7 +25,7 @@ function addBookToLibrary(book) {
 
 function displayBook() {
   displayBooks.innerHTML = "";
-  myLibrary.forEach((book, index) => {
+  myLibrary.map((book, index) => {
     const bookCard = document.createElement("div");
     bookCard.setAttribute("class", "bookCard");
     bookCard.innerHTML = `<h2>${book.title}</h2>
